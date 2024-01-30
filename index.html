@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    
+    <script defer src="./assets/js/script.js" ></script>
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+    </header>
+    <main>
+        <fieldset>
+            <form action="post" id="form">
+                <div>
+                    <div class="inputs">
+                        <label for="task-name">Task Name</label>
+                        <input class="box" type="text" id="task-name" placeholder="eg. sweeping">
+                    </div>
+                    <div class="inputs">
+                        <label for="description">Desription</label>
+                        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label for="due-date">Due Date</label>
+                        <input class="box" type="date" id="due-date">
+                    </div>
+                </div>
+                
+            </form>
+        </fieldset>
+        <section id="task-cards"></section>
+    </main>
+</body>
+</html>
