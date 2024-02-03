@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
     
     <script defer src="./assets/js/script.js" ></script>
+    <script defer src="./assets/js/taskManager.js" ></script>
 </head>
 <body>
     <header>
@@ -14,24 +15,32 @@
     </header>
     <main>
         <fieldset>
-            <form action="post" id="form">
-                <div>
-                    <div class="inputs">
+            <form  id="form">
+                <section class="sections">
+                    <div class="input-div">
                         <label for="task-name">Task Name</label>
-                        <input class="box" type="text" id="task-name" placeholder="eg. sweeping">
+                        <input class="inputs" type="text" id="task-name" placeholder="eg. sweeping">
                     </div>
-                    <div class="inputs">
+                    <div class="input-div">
                         <label for="description">Desription</label>
-                        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                        <textarea class="inputs" name="description" id="description" cols="30" rows="10" placeholder="Explain the task here..."></textarea>
                     </div>
-                </div>
-                <div>
-                    <div>
+                </section>
+                <section id="selectable" class="sections">
+                    <div class="select-div">
                         <label for="due-date">Due Date</label>
-                        <input class="box" type="date" id="due-date">
+                        <input type="date" id="due-date">
                     </div>
-                </div>
-                
+                    <div class="select-div">
+                        <label for="urgency">Select the Urgency</label>
+                        <select name="urgency" id="urgency">
+                            <option value="#" selected>Please choose one</option>
+                            <option value="routine">Routine</option>
+                            <option value="urgent">Urgent</option>
+                        </select>
+                    </div>
+                </section>
+                <button type="submit" id="form-submit">Add Task</button>
             </form>
         </fieldset>
         <section id="task-cards"></section>
